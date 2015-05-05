@@ -82,7 +82,10 @@
         UIImage *image = [UIImage imageWithCGImage:imgRef];
         [_cache setObject:image forKey:[videoPath absoluteString]];
         // on success pass in the image and nil for the error object
-        completion(image, nil);
+        dispatch_async(dispatch_get_main_queue(), ^{
+          
+          completion(image, nil);
+        });
       }
     };
     
