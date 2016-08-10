@@ -71,7 +71,7 @@
                                     }];
 }
 
-- (IBAction)fetchThumbnailForStreamingVideo:(id)sender {
+- (IBAction)fetchThumbnailForStreamingVideo:(UIButton *)sender {
   
   [self.actionButton resignFirstResponder];
   [self.activityIndicator startAnimating];
