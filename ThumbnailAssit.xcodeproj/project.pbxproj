@@ -90,10 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				C44561111AE79AC300314CDA /* assets */,
-				C44561171AE7A2B700314CDA /* frameworks */,
 				C44561021AE79AA100314CDA /* src */,
 				C44560DC1AE7986B00314CDA /* Supporting Files */,
-				C44561101AE79AA800314CDA /* ui assets */,
 			);
 			path = ThumbnailAssit;
 			sourceTree = "<group>";
@@ -101,6 +99,7 @@
 		C44560DC1AE7986B00314CDA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C44561171AE7A2B700314CDA /* frameworks */,
 				C44560DD1AE7986C00314CDA /* Info.plist */,
 				C44560DE1AE7986C00314CDA /* main.m */,
 			);
@@ -155,6 +154,7 @@
 		C44561091AE79AA100314CDA /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				C44561101AE79AA800314CDA /* ui assets */,
 				C445610A1AE79AA100314CDA /* viewControllers */,
 			);
 			path = ui;
@@ -176,6 +176,7 @@
 				C44560EB1AE7986C00314CDA /* LaunchScreen.xib */,
 			);
 			name = "ui assets";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		C44561111AE79AC300314CDA /* assets */ = {
@@ -247,7 +248,7 @@
 		C44560D11AE7986B00314CDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jerry Edens";
 				TargetAttributes = {
 					C44560D81AE7986B00314CDA = {
@@ -370,6 +371,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -437,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThumbnailAssit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -447,6 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ThumbnailAssit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -465,6 +469,7 @@
 				);
 				INFOPLIST_FILE = ThumbnailAssitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssit.app/ThumbnailAssit";
 			};
@@ -480,6 +485,7 @@
 				);
 				INFOPLIST_FILE = ThumbnailAssitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssit.app/ThumbnailAssit";
 			};

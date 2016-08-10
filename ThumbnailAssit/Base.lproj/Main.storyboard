@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XPd-p1-sDR">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XPd-p1-sDR">
                                 <rect key="frame" x="240" y="28" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="ciG-19-SLH"/>
@@ -25,16 +26,16 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGf-F7-8Xn">
-                                <rect key="frame" x="228" y="225" width="144" height="30"/>
-                                <state key="normal" title="Get Video Thumbnail">
+                                <rect key="frame" x="150" y="225" width="300" height="30"/>
+                                <state key="normal" title="Get Video Thumbnail From Streaming Viedo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="fetchThumbnail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4a-eG-SA7"/>
+                                    <action selector="fetchThumbnailForStreamingVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QA7-KE-UtF"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Status Messages" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A3F-xA-FKx">
-                                <rect key="frame" x="17" y="166" width="568" height="30"/>
+                                <rect key="frame" x="21" y="166" width="560" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QRq-91-dhv"/>
                                 </constraints>
@@ -44,20 +45,40 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0vv-vD-IjW">
                                 <rect key="frame" x="290" y="78" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRn-RT-uhf">
+                                <rect key="frame" x="152" y="263" width="296" height="30"/>
+                                <state key="normal" title="Get Video Thumbnail From Embeded Viedo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="fetchThumbnailForEmbededVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lcn-6p-ASg"/>
+                                    <action selector="fetchThumbnailForStreamingVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2T-vb-Kre"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eRn-RT-uhf" firstAttribute="top" secondItem="bGf-F7-8Xn" secondAttribute="bottom" constant="8" id="49D-Jt-KRb"/>
                             <constraint firstAttribute="centerX" secondItem="bGf-F7-8Xn" secondAttribute="centerX" id="4tk-fn-4o8"/>
                             <constraint firstItem="0vv-vD-IjW" firstAttribute="centerX" secondItem="bGf-F7-8Xn" secondAttribute="centerX" id="Apc-kV-q0k"/>
                             <constraint firstItem="A3F-xA-FKx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="FHd-pu-IQQ"/>
                             <constraint firstItem="XPd-p1-sDR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="MLh-FB-aHu"/>
                             <constraint firstItem="A3F-xA-FKx" firstAttribute="top" secondItem="XPd-p1-sDR" secondAttribute="bottom" constant="18" id="NLL-zB-DoS"/>
+                            <constraint firstItem="eRn-RT-uhf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="132" id="TAv-En-Tt6"/>
                             <constraint firstItem="A3F-xA-FKx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="1" id="Wg6-1k-9d5"/>
                             <constraint firstItem="A3F-xA-FKx" firstAttribute="top" secondItem="XPd-p1-sDR" secondAttribute="bottom" constant="18" id="Yj6-wu-blh"/>
                             <constraint firstItem="bGf-F7-8Xn" firstAttribute="top" secondItem="A3F-xA-FKx" secondAttribute="bottom" constant="29" id="cfj-pd-iFk"/>
                             <constraint firstAttribute="centerX" secondItem="XPd-p1-sDR" secondAttribute="centerX" id="g5d-RX-exf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eRn-RT-uhf" secondAttribute="trailing" constant="132" id="kRE-R8-EBA"/>
                             <constraint firstItem="0vv-vD-IjW" firstAttribute="centerY" secondItem="bGf-F7-8Xn" secondAttribute="centerY" constant="-152" id="tQL-01-6OI"/>
+                            <constraint firstItem="eRn-RT-uhf" firstAttribute="centerX" secondItem="bGf-F7-8Xn" secondAttribute="centerX" id="y2S-F5-LYl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TAv-En-Tt6"/>
+                                <exclude reference="kRE-R8-EBA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="bGf-F7-8Xn" id="jcs-iO-oLR"/>

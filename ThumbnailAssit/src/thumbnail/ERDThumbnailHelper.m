@@ -2,7 +2,7 @@
 //  ERDThumbnailHelper.m
 //
 //  Created by Cecil Edens on 3/26/14.
-//  Copyright (c) 2014 Edens R&D. All rights reserved.
+//  Copyright (c) 2014-2016 Edens R&D. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -52,7 +52,10 @@
     
     if ([_cache valueForKey:[videoPath absoluteString]]) {
       
-      completion([_cache objectForKey:[videoPath absoluteString]], nil);
+      dispatch_async(dispatch_get_main_queue(), ^{
+        
+        completion([_cache objectForKey:[videoPath absoluteString]], nil);
+      });
       return;
     }
     
@@ -74,7 +77,10 @@
         if (completion) {
           
           // on Error pass nil for image and initialized error object
-          completion(nil, error);
+          dispatch_async(dispatch_get_main_queue(), ^{
+            
+            completion(nil, error);
+          });
         }
         
       } else if (completion) {
@@ -99,6 +105,34 @@
     [generator generateCGImagesAsynchronouslyForTimes:[NSArray arrayWithObject:[NSValue valueWithCMTime:thumbTime]]
                                     completionHandler:handler];
   }
+}
+
+- (void)createVideoThumbnailWithUrl:(NSURL *)videoURL completionBlock:(thumbnailCompletionBlock)completion {
+
+  AVURLAsset *asset=[AVURLAsset URLAssetWithURL:videoURL options:nil];
+  AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+  generator.appliesPreferredTrackTransform = YES;
+
+  CMTime thumbTime = CMTimeMakeWithSeconds(0,1.0);
+  
+  AVAssetImageGeneratorCompletionHandler handler = ^(CMTime requestedTime,
+                                                     CGImageRef im,
+                                                     CMTime actualTime,
+                                                     AVAssetImageGeneratorResult result,
+                                                     NSError *error){
+    if (result != AVAssetImageGeneratorSucceeded) {
+      NSLog(@"couldn't generate thumbnail, error:%@", error);
+      completion(nil, error);
+    } else {
+
+      UIImage *thumbImg= [UIImage imageWithCGImage:im];
+      completion(thumbImg, nil);
+    }
+  };
+  
+  [generator generateCGImagesAsynchronouslyForTimes:@[[NSValue valueWithCMTime:thumbTime]]
+                                  completionHandler:handler];
+
 }
 
 #pragma mark - Life Cycle

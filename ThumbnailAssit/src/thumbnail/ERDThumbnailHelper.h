@@ -2,7 +2,7 @@
 //  ERDThumbnailHelper.h
 //
 //  Created by Cecil Edens on 3/26/14.
-//  Copyright (c) 2014 Edens R&D. All rights reserved.
+//  Copyright (c) 2014-2016 Edens R&D. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@
 @import UIKit;
 
 /**
- *  The block that is executed after the thumbnail call is completed.
+ *  The block that is executed after the thumbnail call has completed.
  *
  *  @param thumbnail The thumbnail image if successful otherwise nil
  *  @param error     nil if no error otherwise it will ba valid error object.
@@ -35,6 +35,13 @@
 typedef void(^thumbnailCompletionBlock)(UIImage *thumbnail, NSError *error);
 
 
+/**
+ *  @author Jerry Edens, Aug-10-2016
+ *
+ *  @brief A helper utility which creates thumbnail images for videos.
+ *
+ *  @since 1.0
+ */
 @interface ERDThumbnailHelper : NSObject
 
 /**
@@ -49,6 +56,21 @@ typedef void(^thumbnailCompletionBlock)(UIImage *thumbnail, NSError *error);
  */
 + (instancetype)sharedInstance;
 
+/**
+ *  Creates a thumbnail for the video referenced by the file URL.
+ *
+ *  @param videoPath  The file url to the video
+ *  @param completion The completion block that is called upon creation of the thumbnail
+ */
 - (void)createVideoThumbnailWithFilePath:(NSURL *)videoPath completionBlock:(thumbnailCompletionBlock)completion;
+
+/**
+ *  Creates a thumbnail for the video referenced by the URL.
+ *
+ *  @param videoURL   The URL to the video
+ *  @param completion The completion block that is called upon creation of the thumbnail
+ */
+- (void)createVideoThumbnailWithUrl:(NSURL *)videoURL completionBlock:(thumbnailCompletionBlock)completion;
+
 
 @end
