@@ -42,9 +42,9 @@
 		63C1D0741D5B989700CD94A4 /* A-B.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = "A-B.mp4"; path = "ThumbnailAssist/video/A-B.mp4"; sourceTree = SOURCE_ROOT; };
 		63C1D0771D5B98DC00CD94A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ThumbnailAssist/Base.lproj/LaunchScreen.xib; sourceTree = SOURCE_ROOT; };
 		63C1D0791D5B98DC00CD94A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = ThumbnailAssist/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		63C1D07D1D5B9D5500CD94A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ThumbnailAssistTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		C44560D91AE7986B00314CDA /* ThumbnailAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbnailAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44560F21AE7986C00314CDA /* ThumbnailAssist.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumbnailAssist.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C44560F71AE7986C00314CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44561151AE7A2AA00314CDA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -175,7 +175,7 @@
 		C44560F61AE7986C00314CDA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C44560F71AE7986C00314CDA /* Info.plist */,
+				63C1D07D1D5B9D5500CD94A4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
