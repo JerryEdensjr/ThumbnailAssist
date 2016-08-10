@@ -52,7 +52,6 @@
                                 </state>
                                 <connections>
                                     <action selector="fetchThumbnailForEmbededVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lcn-6p-ASg"/>
-                                    <action selector="fetchThumbnailForStreamingVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2T-vb-Kre"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,7 +80,6 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="actionButton" destination="bGf-F7-8Xn" id="jcs-iO-oLR"/>
                         <outlet property="activityIndicator" destination="0vv-vD-IjW" id="CsZ-sN-4Vk"/>
                         <outlet property="statusMessage" destination="A3F-xA-FKx" id="VEZ-Gh-sYa"/>
                         <outlet property="thumbnailView" destination="XPd-p1-sDR" id="4Pl-f1-BmK"/>

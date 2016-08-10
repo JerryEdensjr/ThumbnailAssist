@@ -29,8 +29,8 @@
 
 
 @interface ERDThumbnailHelper() {
-  
-  NSMutableDictionary *_cache;
+
+  NSCache *_cache;
 }
 
 @property (copy, nonatomic) thumbnailCompletionBlock completion;
@@ -47,10 +47,10 @@
     
     if (!_cache) {
       
-      _cache = [NSMutableDictionary dictionary];
+      _cache = [[NSCache alloc] init];
     }
     
-    if ([_cache valueForKey:[videoPath absoluteString]]) {
+    if ([_cache objectForKey:[videoPath absoluteString]]) {
       
       dispatch_async(dispatch_get_main_queue(), ^{
         
@@ -73,7 +73,6 @@
       
       if (result != AVAssetImageGeneratorSucceeded) {
         
-        NSLog(@"%s [Line %d] could not make thumbnail, %@", __PRETTY_FUNCTION__, __LINE__, [error localizedDescription]);
         if (completion) {
           
           // on Error pass nil for image and initialized error object
@@ -99,6 +98,10 @@
     if (self.maxThumbnailSize.width == 0 || self.maxThumbnailSize.height == 0) {
       
       maxSize = CGSizeMake(60.f, 60.f);
+      
+    } else {
+
+      maxSize = self.maxThumbnailSize;
     }
     
     generator.maximumSize = maxSize;
@@ -108,6 +111,23 @@
 }
 
 - (void)createVideoThumbnailWithUrl:(NSURL *)videoURL completionBlock:(thumbnailCompletionBlock)completion {
+
+  @synchronized(self) {
+
+    if (!_cache) {
+
+      _cache = [[NSCache alloc] init];
+    }
+
+    if ([_cache objectForKey:[videoURL absoluteString]]) {
+
+      dispatch_async(dispatch_get_main_queue(), ^{
+
+        completion([_cache objectForKey:[videoURL absoluteString]], nil);
+      });
+      return;
+    }
+  }
 
   AVURLAsset *asset=[AVURLAsset URLAssetWithURL:videoURL options:nil];
   AVAssetImageGenerator *generator = [[AVAssetImageGenerator alloc] initWithAsset:asset];
@@ -121,11 +141,14 @@
                                                      AVAssetImageGeneratorResult result,
                                                      NSError *error){
     if (result != AVAssetImageGeneratorSucceeded) {
+
       NSLog(@"couldn't generate thumbnail, error:%@", error);
       completion(nil, error);
+
     } else {
 
       UIImage *thumbImg= [UIImage imageWithCGImage:im];
+      [_cache setObject:thumbImg forKey:[videoURL absoluteString]];
       completion(thumbImg, nil);
     }
   };

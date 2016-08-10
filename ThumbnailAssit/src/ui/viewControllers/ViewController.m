@@ -31,12 +31,39 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UITextField *statusMessage;
-@property (weak, nonatomic) IBOutlet UIButton *actionButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
 @implementation ViewController
+
+#pragma mark - Helpers
+
+- (thumbnailCompletionBlock)completionBlock {
+
+  __weak __typeof (self) weakSelf = self;
+  return ^(UIImage *thumbnail, NSError *error) {
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+      if (thumbnail) {
+
+        weakSelf.thumbnailView.image = thumbnail;
+        weakSelf.statusMessage.text = @"Success";
+
+      } else {
+
+        weakSelf.thumbnailView.image = nil;
+        weakSelf.statusMessage.text = [error localizedDescription];
+        NSLog(@"%s[%d] %@", __PRETTY_FUNCTION__, __LINE__, [error localizedDescription]);
+      }
+
+      [weakSelf.activityIndicator stopAnimating];
+    });
+  };
+}
+
+#pragma mark - Interface
 
 - (IBAction)fetchThumbnailForEmbededVideo:(UIButton *)sender {
 
@@ -45,64 +72,23 @@
   ERDThumbnailHelper *thumbnailHelper = [ERDThumbnailHelper sharedInstance];
   thumbnailHelper.maxThumbnailSize = CGSizeMake(120.f, 120.f);
 
-  __weak __typeof (self) weakSelf = self;
-  
-  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"A-B" ofType:@"mp4"];
-  NSURL *fileUrl = [NSURL fileURLWithPath:filePath];
+  NSURL *fileUrl = [[NSBundle mainBundle] URLForResource:@"A-B" withExtension:@"mp4"];
 
   [thumbnailHelper createVideoThumbnailWithFilePath:fileUrl
-                                    completionBlock:^(UIImage *thumbnail, NSError *error) {
-
-                                      dispatch_async(dispatch_get_main_queue(), ^{
-
-                                        if (thumbnail) {
-
-                                          weakSelf.thumbnailView.image = thumbnail;
-
-                                        } else {
-
-                                          weakSelf.thumbnailView.image = nil;
-                                          weakSelf.statusMessage.text = [error localizedDescription];
-                                          NSLog(@"%s[%d] %@", __PRETTY_FUNCTION__, __LINE__, [error localizedDescription]);
-                                        }
-                                        
-                                        [weakSelf.activityIndicator stopAnimating];
-                                        });
-                                    }];
+                                    completionBlock:[self completionBlock]];
 }
 
 - (IBAction)fetchThumbnailForStreamingVideo:(UIButton *)sender {
   
-  [self.actionButton resignFirstResponder];
   [self.activityIndicator startAnimating];
 
   ERDThumbnailHelper *thumbnailHelper = [ERDThumbnailHelper sharedInstance];
   thumbnailHelper.maxThumbnailSize = CGSizeMake(120.f, 120.f);
 
-  __weak __typeof (self) weakSelf = self;
-
   NSURL *videoURL = [NSURL URLWithString:@"http://embed.wistia.com/deliveries/5413caeac5fdf4064a2f9eab5c10a0848e42f19f.bin"];
 
   [thumbnailHelper createVideoThumbnailWithUrl:videoURL
-                                    completionBlock:^(UIImage *thumbnail, NSError *error) {
-                                      
-                                      dispatch_async(dispatch_get_main_queue(), ^{
-
-                                        if (thumbnail) {
-
-                                          weakSelf.thumbnailView.image = thumbnail;
-                                          weakSelf.statusMessage.text = @"Success";
-
-                                        } else {
-
-                                          weakSelf.thumbnailView.image = nil;
-                                          weakSelf.statusMessage.text = [error localizedDescription];
-                                          NSLog(@"%s[%d] %@", __PRETTY_FUNCTION__, __LINE__, [error localizedDescription]);
-                                        }
-
-                                        [weakSelf.activityIndicator stopAnimating];
-                                      });
-                                    }];
+                                    completionBlock:[self completionBlock]];
 }
 
 @end
