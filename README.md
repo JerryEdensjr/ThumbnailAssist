@@ -84,5 +84,6 @@ Objective-c
 ```
 
 ####Sample Code
+The Sample code is located in src/ui/viewController/ViewController.m.  The ThumbnailAssist files are located in src/thumbnail.
 
 
