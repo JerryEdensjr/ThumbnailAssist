@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63C1D0591D5B8F9800CD94A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C44560D91AE7986B00314CDA /* ThumbnailAssit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbnailAssit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44560DD1AE7986C00314CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44560DE1AE7986C00314CDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		C44560DB1AE7986B00314CDA /* ThumbnailAssit */ = {
 			isa = PBXGroup;
 			children = (
+				63C1D0591D5B8F9800CD94A4 /* README.md */,
 				C44561111AE79AC300314CDA /* assets */,
 				C44561021AE79AA100314CDA /* src */,
 				C44560DC1AE7986B00314CDA /* Supporting Files */,

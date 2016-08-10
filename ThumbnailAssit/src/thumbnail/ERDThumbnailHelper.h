@@ -27,7 +27,7 @@
 @import UIKit;
 
 /**
- *  The block declaration which, is implemented as a callback to be executed
+ *  The completion block declaration which, is implemented as a callback to be executed
  *  after the thumbnail call has completed.
  *
  *  @param thumbnail The thumbnail image if successful otherwise nil
