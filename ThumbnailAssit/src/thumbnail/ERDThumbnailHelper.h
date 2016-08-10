@@ -27,7 +27,8 @@
 @import UIKit;
 
 /**
- *  The block that is executed after the thumbnail call has completed.
+ *  The block declaration which, is implemented as a callback to be executed
+ *  after the thumbnail call has completed.
  *
  *  @param thumbnail The thumbnail image if successful otherwise nil
  *  @param error     nil if no error otherwise it will ba valid error object.
@@ -36,28 +37,24 @@ typedef void(^thumbnailCompletionBlock)(UIImage *thumbnail, NSError *error);
 
 
 /**
- *  @author Jerry Edens, Aug-10-2016
- *
  *  @brief A helper utility which creates thumbnail images for videos.
- *
- *  @since 1.0
  */
 @interface ERDThumbnailHelper : NSObject
 
 /**
- The default value is 60, 60
+ *  @breif The default value is 60, 60
  */
 @property (assign, nonatomic) CGSize maxThumbnailSize;
 
 /**
- sharedInstance
+ @breif sharedInstance
  @param This method returns the singleton instance for this class
  @return An initialized instance of the object
  */
 + (instancetype)sharedInstance;
 
 /**
- *  Creates a thumbnail for the video referenced by the file URL.
+ *  @breif Creates a thumbnail for the video referenced by the file URL.
  *
  *  @param videoPath  The file url to the video
  *  @param completion The completion block that is called upon creation of the thumbnail
@@ -65,7 +62,7 @@ typedef void(^thumbnailCompletionBlock)(UIImage *thumbnail, NSError *error);
 - (void)createVideoThumbnailWithFilePath:(NSURL *)videoPath completionBlock:(thumbnailCompletionBlock)completion;
 
 /**
- *  Creates a thumbnail for the video referenced by the URL.
+ *  @breif Creates a thumbnail for the video referenced by the URL.
  *
  *  @param videoURL   The URL to the video
  *  @param completion The completion block that is called upon creation of the thumbnail
