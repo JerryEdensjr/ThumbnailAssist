@@ -10,7 +10,6 @@
 		63C1D0661D5B979B00CD94A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1D05E1D5B979B00CD94A4 /* AppDelegate.m */; };
 		63C1D0671D5B979B00CD94A4 /* ERDThumbnailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1D0611D5B979B00CD94A4 /* ERDThumbnailHelper.m */; };
 		63C1D0681D5B979B00CD94A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1D0651D5B979B00CD94A4 /* ViewController.m */; };
-		63C1D06A1D5B97B600CD94A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C1D0691D5B97B600CD94A4 /* Default-568h@2x.png */; };
 		63C1D06F1D5B981E00CD94A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C1D06E1D5B981E00CD94A4 /* Images.xcassets */; };
 		63C1D0731D5B987B00CD94A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C1D0711D5B987B00CD94A4 /* main.m */; };
 		63C1D0751D5B989700CD94A4 /* A-B.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 63C1D0741D5B989700CD94A4 /* A-B.mp4 */; };
@@ -37,7 +36,6 @@
 		63C1D0611D5B979B00CD94A4 /* ERDThumbnailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ERDThumbnailHelper.m; sourceTree = "<group>"; };
 		63C1D0641D5B979B00CD94A4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		63C1D0651D5B979B00CD94A4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		63C1D0691D5B97B600CD94A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		63C1D06E1D5B981E00CD94A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ThumbnailAssist/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		63C1D0701D5B987B00CD94A4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ThumbnailAssist/Info.plist; sourceTree = SOURCE_ROOT; };
 		63C1D0711D5B987B00CD94A4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ThumbnailAssist/main.m; sourceTree = SOURCE_ROOT; };
@@ -160,7 +158,6 @@
 			children = (
 				63C1D0701D5B987B00CD94A4 /* Info.plist */,
 				63C1D0711D5B987B00CD94A4 /* main.m */,
-				63C1D0691D5B97B600CD94A4 /* Default-568h@2x.png */,
 				C44561171AE7A2B700314CDA /* frameworks */,
 			);
 			name = "Supporting Files";
@@ -292,7 +289,6 @@
 				63C1D07A1D5B98DC00CD94A4 /* LaunchScreen.xib in Resources */,
 				63C1D07B1D5B98DC00CD94A4 /* Main.storyboard in Resources */,
 				63C1D0751D5B989700CD94A4 /* A-B.mp4 in Resources */,
-				63C1D06A1D5B97B600CD94A4 /* Default-568h@2x.png in Resources */,
 				63C1D06F1D5B981E00CD94A4 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

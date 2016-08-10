@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.88164228200912476" green="0.88161587715148926" blue="0.88163083791732788" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="eRn-RT-uhf" firstAttribute="top" secondItem="bGf-F7-8Xn" secondAttribute="bottom" constant="8" id="49D-Jt-KRb"/>
                             <constraint firstAttribute="centerX" secondItem="bGf-F7-8Xn" secondAttribute="centerX" id="4tk-fn-4o8"/>
