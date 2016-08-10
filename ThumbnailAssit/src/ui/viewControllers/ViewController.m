@@ -63,17 +63,21 @@
   };
 }
 
-#pragma mark - Interface
+#pragma mark - Button Event Handlers
 
 - (IBAction)fetchThumbnailForEmbededVideo:(UIButton *)sender {
 
   [self.activityIndicator startAnimating];
 
+  // Step 1: Create the thumbnail helper
   ERDThumbnailHelper *thumbnailHelper = [ERDThumbnailHelper sharedInstance];
+  // Step 2: [Optional] Set the desired size of the thumbnail
   thumbnailHelper.maxThumbnailSize = CGSizeMake(120.f, 120.f);
 
+  // Step 3: Create the NSURL for the video
   NSURL *fileUrl = [[NSBundle mainBundle] URLForResource:@"A-B" withExtension:@"mp4"];
 
+  // Step 4: Send message to the thumbnail helper to have it create the thumbnail.
   [thumbnailHelper createVideoThumbnailWithFilePath:fileUrl
                                     completionBlock:[self completionBlock]];
 }
@@ -82,11 +86,15 @@
   
   [self.activityIndicator startAnimating];
 
+  // Step 1: Create the thumbnail helper
   ERDThumbnailHelper *thumbnailHelper = [ERDThumbnailHelper sharedInstance];
+  // Step 2: [Optional] Set the desired size of the thumbnail
   thumbnailHelper.maxThumbnailSize = CGSizeMake(120.f, 120.f);
 
+  // Step 3: Create the NSURL for the video
   NSURL *videoURL = [NSURL URLWithString:@"http://embed.wistia.com/deliveries/5413caeac5fdf4064a2f9eab5c10a0848e42f19f.bin"];
 
+  // Step 4: Send message to the thumbnail helper to have it create the thumbnail.
   [thumbnailHelper createVideoThumbnailWithUrl:videoURL
                                     completionBlock:[self completionBlock]];
 }
