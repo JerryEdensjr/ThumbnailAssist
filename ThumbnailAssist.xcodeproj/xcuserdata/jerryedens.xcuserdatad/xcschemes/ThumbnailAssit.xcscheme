@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C44560D81AE7986B00314CDA"
-               BuildableName = "ThumbnailAssit.app"
-               BlueprintName = "ThumbnailAssit"
-               ReferencedContainer = "container:ThumbnailAssit.xcodeproj">
+               BuildableName = "ThumbnailAssist.app"
+               BlueprintName = "ThumbnailAssist"
+               ReferencedContainer = "container:ThumbnailAssist.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C44560F11AE7986C00314CDA"
-               BuildableName = "ThumbnailAssitTests.xctest"
-               BlueprintName = "ThumbnailAssitTests"
-               ReferencedContainer = "container:ThumbnailAssit.xcodeproj">
+               BuildableName = "ThumbnailAssist.xctest"
+               BlueprintName = "ThumbnailAssistTests"
+               ReferencedContainer = "container:ThumbnailAssist.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44560D81AE7986B00314CDA"
-            BuildableName = "ThumbnailAssit.app"
-            BlueprintName = "ThumbnailAssit"
-            ReferencedContainer = "container:ThumbnailAssit.xcodeproj">
+            BuildableName = "ThumbnailAssist.app"
+            BlueprintName = "ThumbnailAssist"
+            ReferencedContainer = "container:ThumbnailAssist.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44560D81AE7986B00314CDA"
-            BuildableName = "ThumbnailAssit.app"
-            BlueprintName = "ThumbnailAssit"
-            ReferencedContainer = "container:ThumbnailAssit.xcodeproj">
+            BuildableName = "ThumbnailAssist.app"
+            BlueprintName = "ThumbnailAssist"
+            ReferencedContainer = "container:ThumbnailAssist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C44560D81AE7986B00314CDA"
-            BuildableName = "ThumbnailAssit.app"
-            BlueprintName = "ThumbnailAssit"
-            ReferencedContainer = "container:ThumbnailAssit.xcodeproj">
+            BuildableName = "ThumbnailAssist.app"
+            BlueprintName = "ThumbnailAssist"
+            ReferencedContainer = "container:ThumbnailAssist.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

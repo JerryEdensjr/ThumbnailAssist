@@ -31,13 +31,13 @@
 
 /* Begin PBXFileReference section */
 		63C1D0591D5B8F9800CD94A4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		C44560D91AE7986B00314CDA /* ThumbnailAssit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbnailAssit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44560D91AE7986B00314CDA /* ThumbnailAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThumbnailAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44560DD1AE7986C00314CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44560DE1AE7986C00314CDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C44560E71AE7986C00314CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C44560E91AE7986C00314CDA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C44560EC1AE7986C00314CDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C44560F21AE7986C00314CDA /* ThumbnailAssitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumbnailAssitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44560F21AE7986C00314CDA /* ThumbnailAssist.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThumbnailAssist.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C44560F71AE7986C00314CDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C44560F81AE7986C00314CDA /* ThumbnailAssitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThumbnailAssitTests.m; sourceTree = "<group>"; };
 		C44561041AE79AA100314CDA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,8 +72,8 @@
 		C44560D01AE7986B00314CDA = {
 			isa = PBXGroup;
 			children = (
-				C44560DB1AE7986B00314CDA /* ThumbnailAssit */,
-				C44560F51AE7986C00314CDA /* ThumbnailAssitTests */,
+				C44560DB1AE7986B00314CDA /* ThumbnailAssist */,
+				C44560F51AE7986C00314CDA /* ThumbnailAssistTests */,
 				C44560DA1AE7986B00314CDA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,13 +81,13 @@
 		C44560DA1AE7986B00314CDA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C44560D91AE7986B00314CDA /* ThumbnailAssit.app */,
-				C44560F21AE7986C00314CDA /* ThumbnailAssitTests.xctest */,
+				C44560D91AE7986B00314CDA /* ThumbnailAssist.app */,
+				C44560F21AE7986C00314CDA /* ThumbnailAssist.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C44560DB1AE7986B00314CDA /* ThumbnailAssit */ = {
+		C44560DB1AE7986B00314CDA /* ThumbnailAssist */ = {
 			isa = PBXGroup;
 			children = (
 				63C1D0591D5B8F9800CD94A4 /* README.md */,
@@ -95,6 +95,7 @@
 				C44561021AE79AA100314CDA /* src */,
 				C44560DC1AE7986B00314CDA /* Supporting Files */,
 			);
+			name = ThumbnailAssist;
 			path = ThumbnailAssit;
 			sourceTree = "<group>";
 		};
@@ -108,12 +109,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C44560F51AE7986C00314CDA /* ThumbnailAssitTests */ = {
+		C44560F51AE7986C00314CDA /* ThumbnailAssistTests */ = {
 			isa = PBXGroup;
 			children = (
 				C44560F81AE7986C00314CDA /* ThumbnailAssitTests.m */,
 				C44560F61AE7986C00314CDA /* Supporting Files */,
 			);
+			name = ThumbnailAssistTests;
 			path = ThumbnailAssitTests;
 			sourceTree = "<group>";
 		};
@@ -209,9 +211,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C44560D81AE7986B00314CDA /* ThumbnailAssit */ = {
+		C44560D81AE7986B00314CDA /* ThumbnailAssist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C44560FC1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssit" */;
+			buildConfigurationList = C44560FC1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssist" */;
 			buildPhases = (
 				C44560D51AE7986B00314CDA /* Sources */,
 				C44560D61AE7986B00314CDA /* Frameworks */,
@@ -221,14 +223,14 @@
 			);
 			dependencies = (
 			);
-			name = ThumbnailAssit;
+			name = ThumbnailAssist;
 			productName = ThumbnailAssit;
-			productReference = C44560D91AE7986B00314CDA /* ThumbnailAssit.app */;
+			productReference = C44560D91AE7986B00314CDA /* ThumbnailAssist.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C44560F11AE7986C00314CDA /* ThumbnailAssitTests */ = {
+		C44560F11AE7986C00314CDA /* ThumbnailAssistTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C44560FF1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssitTests" */;
+			buildConfigurationList = C44560FF1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssistTests" */;
 			buildPhases = (
 				C44560EE1AE7986C00314CDA /* Sources */,
 				C44560EF1AE7986C00314CDA /* Frameworks */,
@@ -239,9 +241,9 @@
 			dependencies = (
 				C44560F41AE7986C00314CDA /* PBXTargetDependency */,
 			);
-			name = ThumbnailAssitTests;
+			name = ThumbnailAssistTests;
 			productName = ThumbnailAssitTests;
-			productReference = C44560F21AE7986C00314CDA /* ThumbnailAssitTests.xctest */;
+			productReference = C44560F21AE7986C00314CDA /* ThumbnailAssist.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -262,7 +264,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C44560D41AE7986B00314CDA /* Build configuration list for PBXProject "ThumbnailAssit" */;
+			buildConfigurationList = C44560D41AE7986B00314CDA /* Build configuration list for PBXProject "ThumbnailAssist" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -275,8 +277,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C44560D81AE7986B00314CDA /* ThumbnailAssit */,
-				C44560F11AE7986C00314CDA /* ThumbnailAssitTests */,
+				C44560D81AE7986B00314CDA /* ThumbnailAssist */,
+				C44560F11AE7986C00314CDA /* ThumbnailAssistTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,7 +329,7 @@
 /* Begin PBXTargetDependency section */
 		C44560F41AE7986C00314CDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C44560D81AE7986B00314CDA /* ThumbnailAssit */;
+			target = C44560D81AE7986B00314CDA /* ThumbnailAssist */;
 			targetProxy = C44560F31AE7986C00314CDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,7 +444,7 @@
 				INFOPLIST_FILE = ThumbnailAssit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ThumbnailAssist;
 			};
 			name = Debug;
 		};
@@ -453,7 +455,7 @@
 				INFOPLIST_FILE = ThumbnailAssit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ThumbnailAssist;
 			};
 			name = Release;
 		};
@@ -472,8 +474,8 @@
 				INFOPLIST_FILE = ThumbnailAssitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssit.app/ThumbnailAssit";
+				PRODUCT_NAME = ThumbnailAssist;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssist.app/ThumbnailAssist";
 			};
 			name = Debug;
 		};
@@ -488,15 +490,15 @@
 				INFOPLIST_FILE = ThumbnailAssitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iphonedevhouse.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssit.app/ThumbnailAssit";
+				PRODUCT_NAME = ThumbnailAssist;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ThumbnailAssist.app/ThumbnailAssist";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C44560D41AE7986B00314CDA /* Build configuration list for PBXProject "ThumbnailAssit" */ = {
+		C44560D41AE7986B00314CDA /* Build configuration list for PBXProject "ThumbnailAssist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C44560FA1AE7986C00314CDA /* Debug */,
@@ -505,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C44560FC1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssit" */ = {
+		C44560FC1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C44560FD1AE7986C00314CDA /* Debug */,
@@ -514,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C44560FF1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssitTests" */ = {
+		C44560FF1AE7986C00314CDA /* Build configuration list for PBXNativeTarget "ThumbnailAssistTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C44561001AE7986C00314CDA /* Debug */,
